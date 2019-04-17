@@ -1,0 +1,48 @@
+{
+  "name": "octopus-cli",
+  "version": "1.0.0-beta.0",
+  "description": "Cli framework",
+  "main": "./src/index.js",
+  "keywords": [
+    "cli",
+    "octopus",
+    "init"
+  ],
+  "bin": {
+    "oc": "./bin/oc",
+    "octopus": "./bin/oc"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XiaochanXia/octopus-cli.git"
+  },
+  "author": "summer.chan.xia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XiaochanXia/octopus-cli/issues"
+  },
+  "homepage": "https://github.com/XiaochanXia/octopus-cli#readme",
+  "dependencies": {
+    "colors": "^1.3.3"
+  },
+  "devDependencies": {
+    "eslint-config-octopus": "1",
+    "commitlint-config-octopus": "1"
+  },
+  "commitlint": {
+    "extends": [
+      "octopus"
+    ]
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npm.com"
+  }
+}
